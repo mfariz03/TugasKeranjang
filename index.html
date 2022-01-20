@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link href="style1.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Indie Store</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Cyberpunk2077</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Transaction</a>
+            <a class="nav-link" href="index.html">My Order</a>
+            <a class="nav-link" href="#">Notification</a>
+          </div>
+        </div>
+      </div>
+    </nav>  
+    <!-- Akhir Navbar -->
+
+    <!-- jumbotron
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Ada <span>Harga</span> Ada <span>Barang</span></h1>
+        </div>
+    </div>
+
+    Akhir jumbotron -->
+
+    <!-- ISI -->
+
+    <section>
+      <div class="container">
+         <div class="cart">
+            <div id="main-area" class="col-md-12 col-lg-10 mx-auto">
+               <!-- Toko 1 -->
+               <div class="cart-store" id="store1-area">
+                  <button type="button" class="btn btn-link remove-item" id="store1-remove">Delete</button>
+                  <h2>MWApple Store</h2>
+                  <!-- Toko 1 Item 1 -->
+                  <div id="phone-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item">
+                           <img src="images/product-1.png" alt="">
+                           <h5>iPhone 11 128GB Black</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('phone', false, 1219, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="phone" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('phone', true, 1219, 'total')" class="btn btn-default"><i class="fas fa-plus">+</i></button>
+                           </div>
+                           <h5>$<span id="phone-price">1219</span></h5>
+                           <img id="phone-remove" src="images/remove.png" alt="" class="remove-item">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Toko 1 Item 2 -->
+                  <div id="case-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/product-2.png" alt="">
+                           <h5>iPhone 11 Silicone Case - Black</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('case', false, 59, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="case" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('case', true, 59, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                           </div>
+                           <h5>$<span id="case-price">59</span></h5>
+                           <img src="images/remove.png" alt="" class="remove-item" id="case-remove">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Toko 1 Item 3 -->
+                  <div id="cg-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/ChargerIp.jpg" alt="">
+                           <h5>Charger iPhone Original</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('cg', false, 50, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="cg" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('cg', true, 50, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                           </div>
+                           <h5>$<span id="cg-price">50</span></h5>
+                           <img src="images/remove.png" alt="" class="remove-item" id="cg-remove">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Toko 2 -->
+
+               <div class="cart-store" id="store2-area">
+                  <button type="button" class="btn btn-link remove-item" id="store2-remove">Delete</button>
+                  <h2>Legend Store</h2>
+                  <!-- Toko 2 Item 1 -->
+                  <div id="GTA-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item">
+                           <img src="images/GTA V.png" alt="">
+                           <h5>GTA V</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('GTA', false, 21, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="GTA" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('GTA', true, 21, 'total')" class="btn btn-default"><i class="fas fa-plus">+</i></button>
+                           </div>
+                           <h5>$<span id="GTA-price">21</span></h5>
+                           <img id="GTA-remove" src="images/remove.png" alt="" class="remove-item">
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Toko 2 Item 2 -->
+                  <div id="BTF-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/BTF.jpg" alt="">
+                           <h5>Battlefield™ 2042</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('BTF', false, 45, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="BTF" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('BTF', true, 45, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                           </div>
+                           <h5>$<span id="BTF-price">45</span></h5>
+                           <img src="images/remove.png" alt="" class="remove-item" id="BTF-remove">
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Toko 2 Item 3 -->
+                  <div id="FC-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/Farcry.jpg" alt="">
+                           <h5>Far Cry Primal</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('FC', false, 35, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="FC" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('FC', true, 35, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                           </div>
+                           <h5>$<span id="FC-price">35</span></h5>
+                           <img src="images/remove.png" alt="" class="remove-item" id="FC-remove">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+               <!-- Toko 3 -->
+
+               <div class="cart-store" id="store3-area">
+                  <button type="button" class="btn btn-link remove-item" id="store3-remove">Delete</button>
+                  <h2>MyThrifting.Clo</h2>
+                  <!-- Toko 3 Item 1 -->
+                  <div id="hoodie-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item">
+                           <img src="images/hoodie.jpg" alt="">
+                           <h5>Relaxed Fit Hoodie</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('hoodie', false, 30, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="hoodie" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('hoodie', true, 30, 'total')" class="btn btn-default"><i class="fas fa-plus">+</i></button>
+                           </div>
+                           <h5>$<span id="hoodie-price">30</span></h5>
+                           <img id="hoodie-remove" src="images/remove.png" alt="" class="remove-item">
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Toko 3 Item 2 -->
+                  <div id="jacket-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/jacket.jpg" alt="">
+                           <h5>Denim Shirt Jacket</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('jacket', false, 31, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="jacket" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('jacket', true, 31, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                           </div>
+                           <h5>$<span id="jacket-price">31</span></h5>
+                           <img src="images/remove.png" alt="" class="remove-item" id="jacket-remove">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                  
+
+               
+               <!-- Toko 4 -->
+
+               <div class="cart-store" id="store4-area">
+                  <button type="button" class="btn btn-link remove-item" id="store4-remove">Delete</button>
+                  <h2>My Toys Store</h2>
+                  <!-- Toko 4 Item 1 -->
+                  <div id="ironman-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item">
+                           <img src="images/ironman.jpeg" alt="">
+                           <h5>Action Figure Iron Man</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('ironman', false, 10, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="ironman" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('ironman', true, 10, 'total')" class="btn btn-default"><i class="fas fa-plus">+</i></button>
+                           </div>
+                           <h5>$<span id="ironman-price">10</span></h5>
+                           <img id="ironman-remove" src="images/remove.png" alt="" class="remove-item">
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Toko 4 Item 2 -->
+                  <div id="bp-area" class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/blackpanther.jpg.crdownload" alt="">
+                           <h5>Action Figure Black Panther</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button onclick="productUpdate('bp', false, 11, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                              <input id="bp" type="text" class="form-control text-center" value="0">
+                              <button onclick="productUpdate('bp', true, 11, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                           </div>
+                           <h5>$<span id="bp-price">11</span></h5>
+                           <img src="images/remove.png" alt="" class="remove-item" id="bp-remove">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+               <!-- Toko 5 -->
+
+               <div class="cart-store" id="store5-area">
+                  <button type="button" class="btn btn-link remove-item" id="store5-remove">Delete</button>
+                     <h2>IntiSmart Store</h2>
+                  <!-- Toko 4 Item 1 -->
+                  <div id="s21-area" class="cart-item">
+                        <div class="row">
+                           <div class="col-md-7 center-item">
+                              <img src="images/s21.jpg" alt="">
+                              <h5>Samsung S21 5G</h5>
+                           </div>
+                           <div class="col-md-5 center-item">
+                              <div class="input-group number-spinner">
+                                 <button onclick="productUpdate('s21', false, 696, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                                 <input id="s21" type="text" class="form-control text-center" value="0">
+                                 <button onclick="productUpdate('s21', true, 696, 'total')" class="btn btn-default"><i class="fas fa-plus">+</i></button>
+                              </div>
+                           <h5>$<span id="s21-price">696</span></h5>
+                           <img id="s21-remove" src="images/remove.png" alt="" class="remove-item">
+                        </div>
+                     </div>
+                  </div>
+
+               <!-- Toko 4 Item 2 -->
+               <div id="rog-area" class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item mx-auto">
+                        <img src="images/rog5.jpg" alt="">
+                        <h5>Asus ROG 5 (12GB/256GB)</h5>
+                     </div>
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button onclick="productUpdate('rog', false, 1044, 'total')" class="btn btn-default"><i class="fas fa-minus"></i>-</button>
+                           <input id="rog" type="text" class="form-control text-center" value="0">
+                           <button onclick="productUpdate('rog', true, 1044, 'total')" class="btn btn-default"><i class="fas fa-plus"></i>+</button>
+
+                        </div>
+                        <h5>$<span id="rog-price">10441</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item" id="rog-remove">
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+               <!-- Total -->
+
+               <div id="product-calculation" class="cart-total">
+                  <div class="row">
+
+                     <div class="col-md-8">
+                        <!-- <h5>Subtotal : </h5> -->
+                        <!-- <h5>Tax 5% :</h5> -->
+                        <h5>Total :</h5>
+                     </div>
+
+                     <div class="col-md-4 status">
+                        <!-- <h5>$ <span id="subtotal">1278</span></h5> -->
+                        <!-- <h5>$ <span id="tax"> 64</span></h5> -->
+                        <h5>$ <span id="total">0</span></h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 pt-4 pb-4">
+                  <button id="checkout" type="button" class="btn btn-success check-out">Check Out</button>
+               </div>
+            </div>
+
+
+            <!-- Next page -->
+
+           <div>
+               <h5 id="next-page" class="text-center">Thank You For Visiting Our Web Site</h5>
+           </div>
+
+         </div>
+      </div>
+   </section>
+
+    <!-- Akhir ISI -->
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <script src="cart.js"></script>
+  </body>
+</html>
